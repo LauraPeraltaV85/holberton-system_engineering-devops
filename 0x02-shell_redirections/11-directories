@@ -1,2 +1,2 @@
 #!/bin/bash
-find 0x02-shell_redirections/* -maxdepth 0 -type d
+find ./* -maxdepth 0 -type d | wc -l
