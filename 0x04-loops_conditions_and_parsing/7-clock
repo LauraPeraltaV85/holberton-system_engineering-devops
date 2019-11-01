@@ -2,7 +2,7 @@
 #prints hours and minutes
 i="0"
 j="1"
-while [ $i -lt 12 ]
+while [ $i -le 12 ]
 do
       echo "Hora: $i"
       j="1"
