@@ -2,4 +2,5 @@
 #infinite loop "To infinite and beyond"
 while true; do
       echo "To infinite and beyond"
+      sleep 2
 done
