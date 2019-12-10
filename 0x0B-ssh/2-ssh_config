@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configures ssh client's file
+Host *
+    HostName 34.74.122.42
+    User ubuntu
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no
