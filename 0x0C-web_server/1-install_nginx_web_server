@@ -3,6 +3,7 @@
 sudo apt-get update
 sudo apt-get install nginx -y
 sudo chmod -R 755 /var/www
+sudo touch /var/www/html/index.html
 sudo echo "Holberton School" > index_m.html
 sudo mv index_m.html /var/www/html/index.html
 sudo service nginx start
