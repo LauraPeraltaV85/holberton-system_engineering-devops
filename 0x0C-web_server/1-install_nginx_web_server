@@ -2,6 +2,7 @@
 # Install Nginx in the server
 sudo apt-get update
 sudo apt-get install nginx -y
-sudo echo "Holberton School" | sudo mkdir -p /var/www/html | sudo tee index.html
 sudo chmod -R 755 /var/www
+sudo echo "Holberton School" > index_m.html
+sudo mv index_m.html /var/www/html/index.html
 sudo service nginx start
