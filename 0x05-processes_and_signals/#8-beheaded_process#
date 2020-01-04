@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#kills 7
+
+kill -SIGKILL 
