@@ -1,2 +1,1 @@
-# holberton-system_engineering-devops
-Learning the shell basics
+**Learning** the basics: **_shell_**
