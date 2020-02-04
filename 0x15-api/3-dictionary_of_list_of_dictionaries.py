@@ -8,18 +8,20 @@ if __name__ == "__main__":
     req_user = requests.get('https://jsonplaceholder.typicode.com/users')
     ttask = requests.get('https://jsonplaceholder.typicode.com/todos')
     tot_n_tasks = ttask.json()
-    dict_list = []
-    user_id_1 = tot_n_tasks.get('user_id')
-    for task in tot_n_tasks:
-        user_id = task.get('userId')
-        for names in req_user.json():
-            em_name = names.get('username')
-            if user_id is names.get('id'):
+    dict_dict = {}
+    for names in req_user.json():
+        em_name = names.get('username')
+        ids = names.get('id')
+        dict_list = []
+
+        for task in tot_n_tasks:
+            if (task.get('userId') == ids and task.get("completed")):
                 t_tasks = {'task': task.get('title'),
-                           'completed': task.get('completed'), 'username': em_name}
+                           'completed': task.get('completed'),
+                           'username': em_name}
                 dict_list.append(t_tasks)
-        if :
-        dict_user = {user_id: dict_list}
-    print(dict_list)
+
+        dict_dict[ids] = dict_list
+
     with open('todo_all_employees.json', 'w', encoding="utf-8") as file:
-        json.dump(dict_user, file)
+        json.dump(dict_dict, file)
