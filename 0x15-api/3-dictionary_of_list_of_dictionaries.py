@@ -16,9 +16,14 @@ if __name__ == "__main__":
 
         for task in tot_n_tasks:
             if (task.get('userId') == ids and task.get("completed")):
-                t_tasks = {'task': task.get('title'),
-                           'completed': task.get('completed'),
-                           'username': em_name}
+                t_tasks = {}
+                t_tasks['task'] = task.get('title')
+                t_tasks['completed'] = task.get('completed')
+                t_tasks['username'] = em_name
+
+                # t_tasks = {'task': task.get('title'),
+                #           'completed': task.get('completed'),
+                #           'username': em_name}
                 dict_list.append(t_tasks)
 
         dict_dict[ids] = dict_list
