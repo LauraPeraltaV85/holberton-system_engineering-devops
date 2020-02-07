@@ -18,10 +18,10 @@ def recurse(subreddit, hot_list=[], after=""):
         subscribers = (subr.json().get('data').get('children'))
         for hot in subscribers:
             hot_list.append(hot.get('data').get('title'))
-    elif after is None:
-        return hot_list
     else:
         return(None)
-
     after = (subr.json().get('data').get('after'))
+    if after is None:
+        return hot_list
+
     return recurse(subreddit, hot_list, after)
